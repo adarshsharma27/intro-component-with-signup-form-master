@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans' ,sans-serif;
+  }
+  section{
+    width:100%;
+   height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width:1200px;
+    height:600px;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+    display: flex;
+    box-shadow:0 1.9px 21.8px rgba(218, 232, 226, 0.95);
+    border-radius: 20px;
+   
+  }
+   
+  
+  .left-container{
+    width:832px;
+    height:inherit;
+    background-image: url("images/bg-pattern-desktop.svg");
+  }
+  .right-container{
+    width:608px;
+    height:inherit;
+    
+  }
+  .right-container img{
+    width:100%;
+    height:600px;
+  }
+
+    figure{
+      width: 454px;
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+    .content{
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+    }
+    h1{
+      font-size: 3.3rem;
+      color:hsl(0, 6%, 24%);
+      text-transform: uppercase;
+      font-weight:600;
+      width: 389px;
+      line-height: 63px;
+      font-weight: 300;
+    }
+    span{
+      color:hsl(0, 36%, 70%);
+      display: block;
+      font-weight: 300;
+    }
+   
+    p{
+    width: 400px;
+    height: 104px;
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+    line-height: 24px;
+    padding-top: 20px;
+    }
+    main{
+        position: relative;
+    }
+    input{
+        width: 402px;
+        height: 53px;
+        border-radius: 52px;
+        border: 1px solid hsl(0, 36%, 70%);
+        background-color: transparent;
+        margin-top: 20px;
+        outline: none;
+        
+    }
+    input:required:focus:invalid{
+        background:url('images/icon-error.svg') no-repeat 69% 50%;
+        background-size: 25px;
+    }
+    input:required:focus:valid{
+        background:url('images/right.svg') no-repeat 69% 50%;
+        background-size: 25px;
+    }
+    input[placeholder]{
+      font-size: 1rem;
+      color: hsl(0, 36%, 70%);
+      font-weight: 200;
+      padding-left: 22px;
+      
+    }
+    button{
+        outline: none;
+        width: 95px;
+        height: 53px;
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        border:1px solid  hsl(0, 80%, 86%);
+        border-radius: 50px;
+        position: absolute;
+        top: 20px;
+      right: 0px;
+      cursor: pointer;
+    }
+    /* animation*/
+    @keyframes Animation{
+        0%{
+            transform: scale(0.5);
+            }
+        73%{
+            transform: scale(0.8);
+            }
+        99%{
+            transform: scale(1);
+            }
+    }
+    
+    .container{
+        animation: Animation 2s forwards 0s ease-in;
+    }
+
+    /* responsive*/
+    @media(max-width:375px)
+    {
+          .container {
+      width: 375px;
+      height: 800px;
+      margin-top: 40px;
+      padding-top: 20px;
+      flex-wrap: wrap;
+    }
+    figure{
+      width: 200px;
+      height: 114px;
+      margin: 20px;
+    }
+    h1{
+      font-size:3rem;
+      width:277px;
+      text-align: center;
+    }
+    .left-container{
+      width: 335px;
+      margin-top: 38px;
+      padding-top: 35px;
+    }
+
+    p {
+      width: 279px;
+      text-align: justify;
+      height: 165px;
+      padding-left: 24px;
+    }
+    input{
+        width:270px;
+      }
+  button{
+    width:68px;
+  }
+  
+  .right-container img {
+    width: 375px;
+    height: 250px;
+    margin-top: -58px;
+
+  }
+  }
